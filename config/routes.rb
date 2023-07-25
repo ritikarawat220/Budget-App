@@ -1,13 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
-  # resources :categories
-  # resources :entities
-  # resources :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  devise_for :users, controllers: { registrations: 'registrations' }
 
-  # Defines the root path route ("/")
-  # root "articles#index"
-  # root to: "home#index"
   get '/splash', to: 'splashes#index'
 
 
