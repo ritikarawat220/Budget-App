@@ -5,22 +5,32 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "authentication", "mobile_nav", "category", "form", "page_header", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <% if user_signed_in? %>
+
+  <% if user_signed_in? %>
   <div id="mobile-nav-container">
   <button id="close-mobile-nave"><i class="fa-solid fa-xmark"></i></button>
     <!-- Mobile navigation menu -->
-    <div class="profile-info-container ">
-      <div class="profile-img">
-        <i class="fa-solid fa-user"></i>
-      </div>
-      <p><%= current_user.name.split(' ').first %></p>
-    </div>
+<div class="profile-info-container">
+  <div class="profile-img">
+    <% if user_signed_in? && current_user.photo.present? %>
+      <%= image_tag current_user.photo, class: "avatar-img rounded-circle" %>
+    <% else %>
+      <i class="fa-solid fa-user"></i>
+    <% end %>
+  </div>
+  <% if user_signed_in? && current_user.name.present? %>
+    <p><%= current_user.name %></p> <!-- Display the user's name -->
+  <% else %>
+    <p>Guest User</p> <!-- You can provide a default name or message for guests -->
+  <% end %>
+</div>
+
+
     <ul id="mobile-nav-menu">
       <!-- Add your navigation links here -->
       <li class="nav-link"><%= link_to  "Settings", '' %></li>
