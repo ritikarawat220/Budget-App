@@ -25,7 +25,8 @@
 
 # 📖 [Budget App] <a name="about-project"></a>
 
-💰💼 Budget App is a web-based budgeting application built using Ruby on Rails and PostgreSQL. With SpendSmart, users can effortlessly track their income and expenses, gaining full control over their finances.
+💰💼 Budget App is a web-based budgeting application built using Ruby on Rails and PostgreSQL. 
+With BudgetApp, users can effortlessly track their income and expenses, gaining full control over their finances.
 
 ## 🛠 Built With <a name="built-with"></a>
 
