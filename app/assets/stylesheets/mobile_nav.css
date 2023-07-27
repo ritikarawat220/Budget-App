@@ -64,6 +64,16 @@
   padding: 20px;
 }
 
+.avatar-img {
+  width: 200px;
+  height: 210px;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
 .profile-info-container p {
   margin-top: 5px;
   text-align: center;
