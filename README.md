@@ -30,6 +30,7 @@ With BudgetApp, users can effortlessly track their income and expenses, gaining 
 
 ## 🛠 Built With <a name="built-with"></a>
 
+
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
