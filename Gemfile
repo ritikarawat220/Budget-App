@@ -5,7 +5,6 @@ ruby '3.2.2'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.6'
-gem 'rubocop', '>= 1.0', '< 2.0'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
@@ -50,9 +49,9 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
+  gem 'shoulda-matchers'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  # gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'rspec-rails'
+  gem 'debug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
@@ -73,10 +72,12 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'cancancan'
+
 gem 'devise'
 
-gem 'font-awesome-sass', '~> 6.4.0'
+gem 'font-awesome-sass'
 
-gem 'sassc'
+gem 'rspec-rails'
 
-gem 'cancancan'
+gem 'rubocop', '>= 1.0', '< 2.0'
