@@ -17,8 +17,4 @@ test:
 
 production:
   <<: *default
-  database: Budget_App_production
-  username: ritika
-  password: 1234
-  host: localhost
-  port: 5432
+  url: <%= ENV['DATABASE_URL'] %>
